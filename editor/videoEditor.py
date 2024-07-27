@@ -790,7 +790,8 @@ def edit(file, groupData, par, workingDir = "", resourceDir = "..", toVideo = Fa
                 exportSox(AUDPRE, "SFX")
                 AUDPRE = "SFX"
             d['sfx'] = constrain(int(d['sfx']), 1, 100)
-            addSounds(f"{pat}/{AUDPRE}{e0}.wav", d['sfx'], f"{resourceDir}/sounds")
+            for root, dirs, files in os.walk(f"{resourceDir}/sounds"):
+                addSounds(f"{pat}/{AUDPRE}{e0}.wav", d['sfx'], root)
             return AUDPRE
 
         audBind = {
