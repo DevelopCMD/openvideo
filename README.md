@@ -1,6 +1,6 @@
 # Discord Bot that edits videos and photos.
 
-186 stars and counting yet nobody to actually fix anything ;<
+until the main one gets updated i would opt for this fork, removed some sketchy bits :)
 
 Requirements:
 - python 3.10+
