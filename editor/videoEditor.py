@@ -17,7 +17,6 @@ from re          import sub as re_sub
 from subprocessHelper import *
 from betterStutter    import stutterInputProcess
 from videoCrasher     import videoCrasher
-from AutotuneBot      import autotuneURL
 from download         import download
 from listHelper       import *
 from pathHelper       import *
@@ -189,7 +188,7 @@ def timecodeBreak(file, m):
 
 def edit(file, groupData, par, workingDir = "", resourceDir = "..", toVideo = False, toGif = False, disallowTimecodeBreak = False, HIDE_FFMPEG_OUT = True, HIDE_ALL_FFMPEG = True, SHOW_TIMER = False, fixPrint = fixPrint):
     videoFX = ['playreverse', 'hmirror', 'vmirror', 'lag', 'rlag', 'shake', 'fisheye', 'zoom', 'bottomtext', 'toptext', 'normalcaption', 'topcap', 'bottomcap', 'topcaption', 'bottomcaption', 'hypercam', 'bandicam', 'deepfry', 'contrast', 'hue', 'hcycle', 'speed', 'vreverse', 'areverse', 'reverse', 'wscale', 'hscale', 'sharpen', 'watermark', 'framerate', 'invert', 'wave', 'waveamount', 'wavestrength', 'acid', 'hcrop', 'vcrop', 'hflip', 'vflip']
-    audioFX = ['pitch', 'reverb', 'earrape', 'bass', 'mute', 'threshold', 'crush', 'wobble', 'music', 'sfx', 'volume', 'autotune']
+    audioFX = ['pitch', 'reverb', 'earrape', 'bass', 'mute', 'threshold', 'crush', 'wobble', 'music', 'sfx', 'volume']
 
     d = {i: None for i in par}
     for i in groupData:
@@ -774,17 +773,6 @@ def edit(file, groupData, par, workingDir = "", resourceDir = "..", toVideo = Fa
             except Exception as ex:
                 fixPrint("music error.", ex)
                 return AUDPRE
-        def autotune(SOXCMD, AUDPRE):
-            try:
-                if len(SOXCMD) > 0:
-                    exportSox(AUDPRE, "PRE_AUTOTUNE")
-                    AUDPRE = "PRE_AUTOTUNE"
-                autotuneURL(f"{pat}/{AUDPRE}{e0}.wav", d['autotune'], replaceOriginal = True, video = False, executableName = f"{resourceDir}/AutotuneBot/autotune.exe")
-            except Exception as ex:
-                fixPrint("autotune error.", ex)
-                raise ex
-                
-            return AUDPRE
         def sfx(SOXCMD, AUDPRE):
             if len(SOXCMD) > 0:
                 exportSox(AUDPRE, "SFX")
@@ -802,7 +790,6 @@ def edit(file, groupData, par, workingDir = "", resourceDir = "..", toVideo = Fa
             'reverb'   : reverb,
             'crush'    : crush,
             'wobble'   : wobble,
-            'autotune' : autotune,
             'music'    : music,
             'sfx'      : sfx,
             'mute'     : mute
@@ -1027,8 +1014,7 @@ def videoEdit(originalFile, args, workingDir = "./", resourceDir = path.dirname(
         "wavestrength"  :[V, "wavs", r(0, 100) ],
         "repeatuntil"   :[V, "repu", None ],
         "acid"          :[V, "acid", r(1, 100) ],
-        "glitch"        :[V, "glch", r(1, 100) ],
-        "autotune"      :[S, "atb" , "https://www.youtube.com/watch?v=65bNd-PnC64" ]
+        "glitch"        :[V, "glch", r(1, 100) ]
     }
 
     for i, v in par.items(): v[1], v[2] = v[2], v[1] # Dumb ik but it's too much effort otherwise
