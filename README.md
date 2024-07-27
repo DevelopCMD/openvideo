@@ -6,6 +6,7 @@ Requirements:
 - python 3.10+
 - ffmpeg 4.3+
 - sox 14.4+
+
 pip:
 - ffprobe-python
 - ffmpeg-python
