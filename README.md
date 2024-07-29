@@ -7,7 +7,7 @@ until the main one gets updated i would opt for this fork, removed some sketchy 
 - open cmd in repo directory, install listed pip modules below with `pip install`
 - restart cmd, run `discordBot.py` and all is good
 
-## install requirenents
+## install requirements
 - python 3.10+
 - ffmpeg 4.3+
 - sox 14.4+
