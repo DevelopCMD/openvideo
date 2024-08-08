@@ -39,7 +39,6 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 - This will download two videos, speed up, mute, add a song and caption to them, and then finally concatinate them
 
 # Command List
-### Video and Audio Commands
 | Command         | Shorthand   | Type   | Min  | Max          | Description                                                                                         |
 |-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `delfirst`      | `delf`      | -      | -    | -            | When selection is enabled, deletes parts of video before `start`                                    |
