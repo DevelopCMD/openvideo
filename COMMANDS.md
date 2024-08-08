@@ -2,7 +2,7 @@
 
 ## Editing commands
 
-### Destroy command:
+### Destroy
 The `destroy [<arg1>=<val1>,<arg2>=<val2>,...]` commands edits a video according to the parameters </br>
 - `destroy bass=100` or `destroy bass 100`
 
@@ -12,24 +12,24 @@ To use multiple commands, use `,` to separate them
 To use multiple groups of commands, use `|` to separate groups of commands.
 - `ytp=100,toptext=hi|hcycle=3`
 
-### Download command:  
+### Download
 The `download <video>` command takes one parameter `video` as a search query and downloads the first result regardless of URL (no idea why)
 - `download funny video` or `download <URL/video ID>`
 - Not always reliable, up to 8 MB (?)
 
-### Concat command:  
+### Concat
 The `concat <n> [<video1>, <video2>, ...]` command can take in `<n>` videos and concatinate them. You can type just the start of the filename to order them.
 - `concat 2 g h`
 - Say the channel has two recent videos "hello.mp4" and "goodbye.mp4", this concatinates the videos with "goodbye.mp4" coming first
 
 ## Metacommands:
 
-### Pecking order:
+### Pecking order
 
 When doing an editing command, the order is as followed:
 - Attachments > attachments of replied to message > recent messages in channel
     
-### Command chaining:
+### Command chaining
 You can link together commands using `>>` between them.
 - `download funny video >> destroy speed 5, toptext hello` would download `funny video`, post it, then add a caption "hello"
 - Often comes with cooldown though and sometimes unreliable
@@ -39,7 +39,7 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 - This will download two videos, speed up, mute, add a song and caption to them, and then finally concatinate them
 
 # Command List
-### Video and Audio commands:
+### Video and Audio Commands
 | Command         | Shorthand   | Type   | Min  | Max          | Description                                                                                         |
 |-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `delfirst`      | `delf`      | -      | -    | -            | When selection is enabled, deletes parts of video before `start`                                    |
@@ -57,7 +57,7 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 | `stutter`       | `st`        | Number | 0    | 100          | Adds random stutters to the video                                                                   |
 | `timecode`      | `timc`      | Number | 1    | 4            | Messes with the video's timecode metadata. Only applies to Discord bot.                             |
 | `ytp`           | `ytp`       | Number | 0    | 100          | Adds random plays and reverses to a video.                                                          |
-### Video specific:
+### Video Specific
 | Command         | Shorthand   | Type   | Min  | Max          | Description                                                                                         |
 |-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `acid`          | `acid`      | Number | 1    | 100          | Makes it look like you're on acid                                                                   |
@@ -98,7 +98,7 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 | `wavestrength`  | `wavs`      | Number | 1    | 100          | Controls how big waves are                                                                          |
 | `wscale`        | `ws`        | Number | -500 | 500          | Sets the horizontal resolution.                                                                     |
 | `zoom`          | `zm`        | Number | -15  | 15           | Zooms towards the middle of the video. Negative values do the same, but more pixellated.            |
-### Audio specific:
+### Audio Specific
 | Command         | Shorthand   | Type   | Min  | Max          | Description                                                                                         |
 |-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `abr`           | `abr`       | Number | 0    | 100          | Audio Bit Reduction - Reduces audio quality                                                         |
