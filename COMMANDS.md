@@ -48,6 +48,7 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 | Command         | Shorthand   | Type   | Min  | Max          | Description                                                                                         |
 |-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `abr`           | `abr`       | Number | 0    | 100          | Audio Bit Reduction - Reduces audio quality                                                         |
+|-----------------|-------------|--------|------|--------------|-----------------------------------------------------------------------------------------------------|
 | `vbr`           | `vbr`       | Number | 0    | 100          | Video bit reduction, worsens quality of video                                                       |
 | `watermark`     | `wtm`       | Number | 0    | 100          | Adds random watermarks to a video. Higher numbers add more.                                         |
 | `bandicam`      | `bndc`      | -      | -    | -            | Adds a Bandicam watermark                                                                           |
