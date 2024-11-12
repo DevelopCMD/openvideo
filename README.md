@@ -8,7 +8,7 @@ until the main one gets updated i would opt for this fork, removed some sketchy 
 - restart cmd, run `discordBot.py` and all is good
 
 ## install requirements
-- python 3.10+
+- python 3.10-3.12
 - ffmpeg 4.3+
 - sox 14.4+
 - config.json - configuration file, copy config.json.template to config.json and fill and edit to your own configuration
