@@ -104,7 +104,7 @@ By adding `!` at the start of a command, the bot, when replying to itself, will 
 | `areverse`      | `arev`      | -      | -    | -            | Reverses audio                                                                                      |
 | `bass`          | `bs`        | Number | 0    | 100          | Bass boost                                                                                          |
 | `crush`         | `cr`        | Number | 1    | 100          | Obliterates audio                                                                                   |
-| `earrape`       | `er`        | Number | 0    | 100          | Earrapes the video, by making the video very loud and distorted.                                    |
+| `earrape`       | `er`        | Number | 0    | 3.75 / 100   | Earrapes the video, by making the video very loud and distorted.                                    |
 | `music`         | `mus`       | Text   | -    | -            | Music is added using a YouTube video ID (the text after ?watch=). The song must be under 5 minutes. |
 | `musicdelay`    | `musd`      | Number | 0    | End of video | Number of seconds corresponding to when the added music starts                                      |
 | `musicskip`     | `muss`      | Number | 0    | End of music | Starts the song at a given time of the song (in seconds)                                            |
