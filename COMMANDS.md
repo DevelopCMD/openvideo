@@ -14,7 +14,7 @@ To use multiple groups of commands, use `|` to separate groups of commands.
 
 ### Download
 The `download <video>` command takes one parameter `video` as a search query and downloads the first result regardless of URL (no idea why)
-- `download funny video` or `download <URL/video ID>`
+- `download chevron cars lore` or `download <URL/video ID>`
 - Not always reliable, up to 8 MB (?)
 
 ### Concat
@@ -31,7 +31,7 @@ When doing an editing command, the order is as followed:
     
 ### Command chaining
 You can link together commands using `>>` between them.
-- `download funny video >> destroy speed 5, toptext hello` would download `funny video`, post it, then add a caption "hello"
+- `download posy asmr >> destroy speed 5, toptext hello` would download `posy asmr`, post it, then add a caption "hello"
 - Often comes with cooldown though and sometimes unreliable
     
 By adding `!` at the start of a command, the bot, when replying to itself, will override the previous message by deleting it before sending the result.
