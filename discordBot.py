@@ -373,8 +373,8 @@ async def parse_command(message):
 
     match final_command_name:
         case "help":
-            if 'veb' in original_msg:
-                await message.reply("VideoEditBot Command Documentation: https://github.com/GanerCodes/videoEditBot/blob/master/COMMANDS.md")
+            if 'ovb' in original_msg:
+                await message.reply("OpenVideoBot Command Documentation: https://github.com/DevelopCMD/openvideo/blob/dev/COMMANDS.md")
         case "hat":
                 await message.reply("this command has been discontinued, f you")
         case "concat":
