@@ -356,6 +356,12 @@ async def parse_command(message):
         final_command_name = "destroy"
         if not ev1 or cmd == "":
             args = f"{spl[0].strip()} {args}" #
+    elif cmd == "dbg.ovb.neofetch":
+        final_command_name = "dbg.ovb.neofetch"
+    elif cmd == "dbg.ovb.uptime":
+        final_command_name = "dbg.ovb.uptime"
+    elif cmd == "dbg.ovb.updatesystem":
+        final_command_name = "dbg.ovb.updatesystem"
 
     if not final_command_name:
         return
@@ -370,9 +376,7 @@ async def parse_command(message):
             if 'veb' in original_msg:
                 await message.reply("VideoEditBot Command Documentation: https://github.com/GanerCodes/videoEditBot/blob/master/COMMANDS.md")
         case "hat":
-            embed = discord.Embed(title = 'hat', description = 'hat')
-            embed.set_image(url = "https://cdn.discordapp.com/attachments/748021401016860682/920801735147139142/5298188282_1639606638167.png")
-            await message.reply("Hat", embed=embed)
+                await message.reply("this command has been discontinued, f you")
         case "concat":
             Task(
                 Action(prepare_concat, message, args,
@@ -423,6 +427,18 @@ async def parse_command(message):
                 async_handler = async_runner,
                 persist_result_values = True
             ).run_threaded()
+        case "dbg.ovb.systeminfo":
+            command = "uname -a"
+            unameou = subprocess.check_output(command, shell=True, text=True)
+            await message.reply("**OVB System Info** ```" + unameou + "```")
+        case "dbg.ovb.uptime":
+            command = "uptime"
+            upty = subprocess.check_output(command, shell=True, text=True)
+            await message.reply("**OVB System Uptime** ```" + upty + "```")
+        case "dbg.ovb.neofetch":
+            command = "neofetch --stdout"
+            niofe = subprocess.check_output(command, shell=True, text=True)
+            await message.reply("```" + niofe + "```")
             
 botReady = False
 @bot.event
