@@ -8,7 +8,7 @@ A fork of a stable VEB src code collection which is a fork of VEB src code
 - restart cmd, run `discordBot.py` and all is good
 
 ## Install requirements:
-- Python 3.10-3.12
+- Python 3.10+
 - FFmpeg 4.3+
 - SoX 14.4+
 - config.json - configuration file, copy config.json.template to config.json and fill and edit to your own configuration
